@@ -3,6 +3,8 @@ import { SimpleReporter } from '../simple-reporter';
 import { faker } from '@faker-js/faker';
 import { StatusCodes } from 'http-status-codes';
 
+const sleep = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
+
 describe('ServeRest API', () => {
   let token = '';
   let idUsuario = '';
@@ -57,6 +59,10 @@ describe('ServeRest API', () => {
         type: 'object'
       })
       .returns('authorization');
+  });
+
+  afterEach(async () => {
+    await sleep(1500);
   });
 
   describe('Validações login', () => {
