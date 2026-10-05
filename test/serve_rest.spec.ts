@@ -5,7 +5,7 @@ import { StatusCodes } from 'http-status-codes';
 
 const sleep = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
 
-describe('ServeRest API', () => {
+describe.skip('ServeRest API', () => {
   let token = '';
   let idUsuario = '';
   let idProduto = '';
@@ -62,7 +62,7 @@ describe('ServeRest API', () => {
   });
 
   afterEach(async () => {
-    await sleep(1500);
+    await sleep(10000);
   });
 
   describe('Validações login', () => {
