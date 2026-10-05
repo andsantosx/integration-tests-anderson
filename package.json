@@ -1,5 +1,5 @@
 {
-  "name": "integration-tests-jest",
+  "name": "integration-tests-anderson",
   "version": "1.0.0",
   "description": "API testing with a simple integration between JestJS and PactumJS.",
   "main": "index.js",
